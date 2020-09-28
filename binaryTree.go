@@ -12,7 +12,7 @@ func Walk(t *tree.Tree, ch chan int) {
 		Walk(t.Left, ch)
 		ch <- t.Value
 		Walk(t.Right, ch)
-
+		Walk(t, ch)
 	}
 }
 func Same(t1, t2 *tree.Tree) bool {
